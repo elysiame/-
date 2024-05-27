@@ -43,4 +43,11 @@ class UserServiceTest {
         long l = userService.userRegister(userAccount, password, checkPassword);
         Assertions.assertEquals(-1,l);
     }
+
+    @Test
+    void testDelete(){
+        Long id = 1l;
+        boolean b = userService.removeById(id);
+        System.out.println(b);
+    }
 }
